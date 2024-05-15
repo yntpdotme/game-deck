@@ -77,6 +77,8 @@ GameDeck is a vibrant platform that lets gamers discover, explore, and play a cu
 ## 🤝&nbsp;&nbsp;Contributing
 
 Contributions are always welcome!
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways to get started.
 </br></br>
 
 ## 🪪&nbsp;&nbsp; License
