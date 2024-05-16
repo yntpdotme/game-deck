@@ -22,6 +22,7 @@
 		"@types/cors": "^2.8.17",
 		"@types/hpp": "^0.2.6",
 		"@types/request-ip": "^0.0.41",
+		"axios": "^1.7.7",
 		"compression": "^1.7.5",
 		"cors": "^2.8.5",
 		"dotenv": "^16.4.5",
