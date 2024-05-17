@@ -1,5 +1,11 @@
+import {Button} from '@chakra-ui/react';
+
 const App = () => {
-	return <h1>GameDeck</h1>;
+	return (
+		<>
+			<Button colorScheme="blue">GameDeck</Button>
+		</>
+	);
 };
 
 export default App;
