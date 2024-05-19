@@ -1,3 +1,4 @@
+import GameGrid from '@/components/GameGrid';
 import {Box, Grid, GridItem} from '@chakra-ui/react';
 
 const HomePage = () => {
@@ -7,6 +8,10 @@ const HomePage = () => {
 				base: `"main"`,
 				lg: `"aside main"`,
 			}}
+			templateColumns={{
+				base: '1fr',
+				lg: '280px 1fr',
+			}}
 		>
 			<Box hideBelow="lg">
 				<GridItem area="aside" bg="yellow.500">
@@ -14,7 +19,7 @@ const HomePage = () => {
 				</GridItem>
 			</Box>
 			<GridItem area="main" bg="dodgerblue">
-				Main
+				<GameGrid />
 			</GridItem>
 		</Grid>
 	);
