@@ -1,7 +1,7 @@
+import logo from '@/assets/logo.png';
 import {ColorModeButton} from '@/components/ui/color-mode';
 import {HStack, Image} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
-import logo from '../assets/logo.png';
 
 const NavBar = () => {
 	return (

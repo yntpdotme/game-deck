@@ -1,8 +1,8 @@
+import CriticScore from '@/components/CriticScore';
+import PlatformIconList from '@/components/PlatformIconList';
 import Game from '@/entities/Game';
 import getCroppedImagedUrl from '@/services/imageUrl';
 import {Card, HStack, Image} from '@chakra-ui/react';
-import CriticScore from './CriticScore';
-import PlatformIconList from './PlatformIconList';
 
 type Props = {
 	game: Game;
