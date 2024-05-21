@@ -1,4 +1,5 @@
 import Game from '@/entities/Game';
+import getCroppedImagedUrl from '@/services/imageUrl';
 import {Card, HStack, Image} from '@chakra-ui/react';
 import CriticScore from './CriticScore';
 import PlatformIconList from './PlatformIconList';
@@ -18,7 +19,7 @@ const GameCard = ({game}: Props) => {
 			mb="6px"
 		>
 			<Image
-				src={game.background_image}
+				src={getCroppedImagedUrl(game.background_image)}
 				objectFit="cover"
 				h={{base: '240px', md: '220px', lg: '200px'}}
 			/>
