@@ -1,4 +1,5 @@
 import GameGrid from '@/components/GameGrid';
+import GenreList from '@/components/GenreList';
 import {Box, Grid, GridItem} from '@chakra-ui/react';
 
 const HomePage = () => {
@@ -14,8 +15,8 @@ const HomePage = () => {
 			}}
 		>
 			<Box hideBelow="lg">
-				<GridItem area="aside" bg="yellow.500">
-					Aside
+				<GridItem area="aside">
+					<GenreList />
 				</GridItem>
 			</Box>
 			<GridItem area="main">
