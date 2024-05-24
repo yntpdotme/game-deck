@@ -13,6 +13,7 @@ const HomePage = () => {
 				base: '1fr',
 				lg: '280px 1fr',
 			}}
+			padding="10px"
 		>
 			<Box hideBelow="lg">
 				<GridItem area="aside">
