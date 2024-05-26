@@ -24,7 +24,7 @@ const GameCard = ({game}: Props) => {
 				h={{base: '240px', md: '220px', lg: '200px'}}
 			/>
 			<Card.Body gap="2.5">
-				<Card.Description fontSize="md">
+				<Card.Description fontSize="md" as="div">
 					<HStack justifyContent="space-between">
 						<PlatformIconList
 							platforms={game.parent_platforms?.map(p => p.platform)}
