@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/menu';
 import useGameQueryStore from '@/data/store';
 import usePlatforms from '@/hooks/usePlatforms';
-import {BsChevronDown} from 'react-icons/bs';
+import {MdKeyboardDoubleArrowDown} from 'react-icons/md';
 
 const PlatformSelector = () => {
 	const {data: platforms, error} = usePlatforms();
@@ -23,10 +23,10 @@ const PlatformSelector = () => {
 
 	return (
 		<MenuRoot>
-			<MenuTrigger asChild mt={3}>
+			<MenuTrigger asChild>
 				<Button variant="subtle" size="md" rounded={6}>
 					{selectedPlatform?.name || 'Platforms'}
-					<BsChevronDown />
+					<MdKeyboardDoubleArrowDown />
 				</Button>
 			</MenuTrigger>
 			<MenuContent pos="absolute" mt={2} rounded={6} p={2}>

@@ -1,7 +1,8 @@
 import GameGrid from '@/components/GameGrid';
 import GenreList from '@/components/GenreList';
 import PlatformSelector from '@/components/PlatformSelector';
-import {Box, Grid, GridItem} from '@chakra-ui/react';
+import SortSelector from '@/components/SortSelector';
+import {Box, Flex, Grid, GridItem} from '@chakra-ui/react';
 
 const HomePage = () => {
 	return (
@@ -22,7 +23,10 @@ const HomePage = () => {
 				</GridItem>
 			</Box>
 			<GridItem area="main">
-				<PlatformSelector />
+				<Flex gap={5} mt={3} mb={6}>
+					<PlatformSelector />
+					<SortSelector />
+				</Flex>
 				<GameGrid />
 			</GridItem>
 		</Grid>
