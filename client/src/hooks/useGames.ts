@@ -15,6 +15,7 @@ const useGames = () => {
 			apiClient.getAll({
 				params: {
 					genres: gameQuery.genreId,
+					parent_platforms: gameQuery.platformId,
 				},
 			}),
 		staleTime: ms('24h'),

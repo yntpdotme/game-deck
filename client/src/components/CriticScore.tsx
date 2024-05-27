@@ -7,6 +7,8 @@ type Props = {
 const CriticScore = ({score}: Props) => {
 	const color = score > 75 ? 'green' : score > 60 ? 'yellow' : 'red';
 
+	if (!score) return null;
+
 	return (
 		<Badge colorPalette={color} fontSize="14px" paddingX={2}>
 			{score}
