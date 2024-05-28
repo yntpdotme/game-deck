@@ -30,6 +30,9 @@ const PlatformSelector = () => {
 				</Button>
 			</MenuTrigger>
 			<MenuContent pos="absolute" mt={2} rounded={6} p={2}>
+				<MenuItem value="all" onClick={() => setSelectedPlatformId(NaN)}>
+					All
+				</MenuItem>
 				{platforms?.results.map(platform => (
 					<MenuItem
 						key={platform.id}
