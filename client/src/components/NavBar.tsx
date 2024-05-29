@@ -3,6 +3,7 @@ import logo from '@/assets/logo.png';
 import {ColorModeButton, useColorMode} from '@/components/ui/color-mode';
 import {HStack, Image} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
+import SearchInput from './SearchInput';
 
 const NavBar = () => {
 	const {colorMode} = useColorMode();
@@ -15,7 +16,10 @@ const NavBar = () => {
 					width={{base: '42px', lg: '52px'}}
 				/>
 			</Link>
-			<ColorModeButton mt={{base: 2, lg: 3}} scale={{base: 1.1, lg: 1.2}} />
+			<HStack mt={{base: 2, lg: 3}} gap={4}>
+				<SearchInput />
+				<ColorModeButton scale={{base: 1.1, lg: 1.2}} />
+			</HStack>
 		</HStack>
 	);
 };
