@@ -19,6 +19,7 @@ const useGames = () => {
 						? gameQuery.platformId
 						: undefined,
 					ordering: gameQuery.sortOrder,
+					search: gameQuery.searchText,
 				},
 			}),
 		staleTime: ms('24h'),

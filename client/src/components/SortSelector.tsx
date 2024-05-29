@@ -11,14 +11,14 @@ import {HiMiniChevronUpDown} from 'react-icons/hi2';
 const SortSelector = () => {
 	const sortOrders = [
 		{value: '', label: 'Relevance'},
-		{value: 'name', label: 'Name, A-Z'},
-		{value: '-name', label: 'Name, Z-A'},
-		{value: 'added', label: 'Date added, old to new'},
-		{value: '-added', label: 'Date added, new to old'},
-		{value: 'released', label: 'Release Date, old to new'},
-		{value: '-released', label: 'Release Date, new to old'},
-		{value: '-metacritic', label: 'Popularity, high to low'},
-		{value: '-rating', label: 'Average rating, high to low'},
+		{value: 'name', label: 'Name (A-Z)'},
+		{value: '-name', label: 'Name (Z-A)'},
+		{value: 'added', label: 'Date added (oldest)'},
+		{value: '-added', label: 'Date added (newest)'},
+		{value: 'released', label: 'Release Date (oldest)'},
+		{value: '-released', label: 'Release Date (newest)'},
+		{value: '-metacritic', label: 'Popularity (Highest)'},
+		{value: '-rating', label: 'Average rating (Highest)'},
 	];
 
 	const sortOrder = useGameQueryStore(s => s.gameQuery.sortOrder);
