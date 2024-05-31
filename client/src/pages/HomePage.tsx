@@ -1,4 +1,5 @@
 import GameGrid from '@/components/GameGrid';
+import GameHeading from '@/components/GameHeading';
 import GenreList from '@/components/GenreList';
 import PlatformSelector from '@/components/PlatformSelector';
 import SortSelector from '@/components/SortSelector';
@@ -23,6 +24,7 @@ const HomePage = () => {
 				</GridItem>
 			</Box>
 			<GridItem area="main">
+				<GameHeading/>
 				<Flex gap={5} mt={3} mb={6}>
 					<PlatformSelector />
 					<SortSelector />
