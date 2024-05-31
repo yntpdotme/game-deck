@@ -1,3 +1,4 @@
+import allGenres from '@/assets/all-genres.webp';
 import GenreListSkeleton from '@/components/GenreListSkeleton';
 import {Button} from '@/components/ui/button';
 import useGameQueryStore from '@/data/store';
@@ -16,11 +17,31 @@ const GenreList = () => {
 
 	return (
 		<>
-			<Heading fontSize="2xl" mt={4} mb={2}>
+			<Heading fontSize="2xl" mt={4} mb={2.5}>
 				Genres
 			</Heading>
 			<List.Root>
 				{isLoading && skeletons.map(s => <GenreListSkeleton key={s} />)}
+				<List.Item py={1} listStyle="none" ml={0.5}>
+					<HStack gap={1}>
+						<Image
+							height={!selectedGenreId ? '30px' : '7'}
+							borderRadius={4}
+							objectFit="cover"
+							src={allGenres}
+							w={!selectedGenreId ? '46px' : '42px'}
+						/>
+						<Button
+							variant="plain"
+							fontSize="lg"
+							fontWeight={!selectedGenreId ? 'bold' : 'normal'}
+							onClick={() => setSelectedGenreId(NaN)}
+							px={!selectedGenreId ? '1' : '2'}
+						>
+							All
+						</Button>
+					</HStack>
+				</List.Item>
 				{genres?.results.map(genre => (
 					<List.Item key={genre.id} py={1} listStyle="none" ml={0.5}>
 						<HStack>
@@ -33,7 +54,6 @@ const GenreList = () => {
 							<Button
 								variant="plain"
 								px={genre.id === selectedGenreId ? '1' : '1.5'}
-								m={0}
 								fontSize="lg"
 								fontWeight={genre.id === selectedGenreId ? 'bold' : 'normal'}
 								onClick={() => setSelectedGenreId(genre.id)}
