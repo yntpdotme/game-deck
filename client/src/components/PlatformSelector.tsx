@@ -6,6 +6,7 @@ import {
 	MenuTrigger,
 } from '@/components/ui/menu';
 import useGameQueryStore from '@/data/store';
+import usePlatform from '@/hooks/usePlatform';
 import usePlatforms from '@/hooks/usePlatforms';
 import {MdKeyboardDoubleArrowDown} from 'react-icons/md';
 
@@ -14,10 +15,7 @@ const PlatformSelector = () => {
 
 	const selectedPlatformId = useGameQueryStore(s => s.gameQuery.platformId);
 	const setSelectedPlatformId = useGameQueryStore(s => s.setPlatformId);
-
-	const selectedPlatform = platforms?.results.find(
-		p => p.id === selectedPlatformId
-	);
+	const selectedPlatform = usePlatform(selectedPlatformId);
 
 	if (error) return null;
 
