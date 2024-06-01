@@ -18,7 +18,7 @@ const NavBar = () => {
 			</Link>
 			<HStack mt={{base: 2, lg: 3}} gap={4}>
 				<SearchInput />
-				<ColorModeButton scale={{base: 1.1, lg: 1.2}} />
+				<ColorModeButton scale={{base: 1, lg: 1.1}} />
 			</HStack>
 		</HStack>
 	);
