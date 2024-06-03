@@ -3,6 +3,7 @@ import useGames from '@/hooks/useGames';
 import {SimpleGrid, Spinner, Text} from '@chakra-ui/react';
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import {Link} from 'react-router-dom';
 import GameCardSkeleton from './GameCardSkeleton';
 
 const GameGrid = () => {
@@ -32,7 +33,9 @@ const GameGrid = () => {
 				{games?.pages.map((page, index) => (
 					<React.Fragment key={index}>
 						{page.results.map(game => (
-							<GameCard key={game.id} game={game} />
+							<Link to={`/games/${game.slug}`}>
+								<GameCard key={game.id} game={game} />
+							</Link>
 						))}
 					</React.Fragment>
 				))}
