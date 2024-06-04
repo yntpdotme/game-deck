@@ -1,4 +1,6 @@
+import Genre from '@/entities/Genre';
 import Platform from '@/entities/Platform';
+import Publisher from '@/entities/Publisher';
 
 type Game = {
 	id: number;
@@ -8,6 +10,8 @@ type Game = {
 	metacritic: number;
 	slug: string;
 	description_raw: string;
+	genres: Genre[];
+	publishers: Publisher[];
 };
 
 export default Game;
