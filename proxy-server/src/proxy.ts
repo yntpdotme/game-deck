@@ -1,3 +1,4 @@
+import apicache from 'apicache';
 import axios from 'axios';
 import express, {Request, Response} from 'express';
 
@@ -5,6 +6,11 @@ const router = express.Router();
 
 const API_BASE_URL = process.env.API_BASE_URL;
 const API_KEY = process.env.API_KEY;
+
+const cache = apicache.middleware;
+
+// Apply caching for 2 minutes to all routes in this router
+router.use(cache('2 minutes'));
 
 router.use(async (req: Request, res: Response) => {
 	try {
