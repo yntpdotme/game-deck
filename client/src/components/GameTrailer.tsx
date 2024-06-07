@@ -1,5 +1,5 @@
 import useTrailers from '@/hooks/useTrailers';
-import {Heading} from '@chakra-ui/react';
+import {Box, Heading} from '@chakra-ui/react';
 import {useNavigate} from 'react-router-dom';
 
 type Props = {
@@ -16,7 +16,7 @@ const GameTrailer = ({gameId}: Props) => {
 	const first = trailer?.results[0];
 
 	return first ? (
-		<>
+		<Box mt={2} minW="50%">
 			<Heading as="dt" fontSize="lg" mb={5} color="gray.500">
 				Trailer
 			</Heading>
@@ -26,7 +26,7 @@ const GameTrailer = ({gameId}: Props) => {
 				controls
 				width="100%"
 			/>
-		</>
+		</Box>
 	) : null;
 };
 

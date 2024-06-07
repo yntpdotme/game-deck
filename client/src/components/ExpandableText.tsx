@@ -8,7 +8,7 @@ type Props = {
 
 const ExpandableText = ({children}: Props) => {
 	const [expanded, setExpanded] = useState(false);
-	const limit = 200;
+	const limit = 250;
 
 	if (!children) return null;
 
@@ -22,7 +22,7 @@ const ExpandableText = ({children}: Props) => {
 			<Button
 				size="xs"
 				ml={1}
-				variant="solid"
+				variant="surface"
 				onClick={() => setExpanded(!expanded)}
 				border={0}
 			>

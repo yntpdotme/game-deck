@@ -25,9 +25,8 @@ const GameDetailPage = () => {
 					<ExpandableText>{game.description_raw}</ExpandableText>
 					<GameAttributes game={game} />
 				</Box>
-				<Box mt={2}>
-					<GameTrailer gameId={game.id} />
-				</Box>
+
+				<GameTrailer gameId={game.id} />
 			</Flex>
 			<Box>
 				<GameScreenshots gameId={game.id} />
