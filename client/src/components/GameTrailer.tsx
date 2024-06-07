@@ -17,7 +17,7 @@ const GameTrailer = ({gameId}: Props) => {
 
 	return first ? (
 		<Box mt={2} minW="50%">
-			<Heading as="dt" fontSize="lg" mb={5} color="gray.500">
+			<Heading fontSize="lg" mb={5} color="gray.500">
 				Trailer
 			</Heading>
 			<video

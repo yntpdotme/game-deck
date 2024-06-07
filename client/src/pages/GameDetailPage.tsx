@@ -1,5 +1,6 @@
 import ExpandableText from '@/components/ExpandableText';
 import GameAttributes from '@/components/GameAttributes';
+import GameDetailsSkeleton from '@/components/GameDetailsSkeleton';
 import GameScreenshots from '@/components/GameScreenshots';
 import GameTrailer from '@/components/GameTrailer';
 import useGame from '@/hooks/useGame';
@@ -12,7 +13,7 @@ const GameDetailPage = () => {
 
 	const {data: game, isLoading, error} = useGame(slug!);
 
-	if (isLoading) return <p>Loading...</p>;
+	if (isLoading) return <GameDetailsSkeleton />;
 	if (error || !game) navigate('/not-found');
 
 	return (

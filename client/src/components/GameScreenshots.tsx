@@ -15,7 +15,7 @@ const GameScreenshots = ({gameId}: Props) => {
 
 	return (
 		<>
-			<Heading as="dt" fontSize="lg" mb={5} color="gray.500">
+			<Heading fontSize="lg" mb={5} color="gray.500">
 				Screenshots
 			</Heading>
 			<SimpleGrid columns={{base: 1, md: 2}} gap={{sm: 3, md: 2, lg: 2}}>
