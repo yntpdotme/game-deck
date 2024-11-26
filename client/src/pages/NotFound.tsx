@@ -1,5 +1,5 @@
-import { Button, Flex, Heading, Text, VStack } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import {Button, Flex, Heading, Text, VStack} from '@chakra-ui/react';
+import {Link} from 'react-router-dom';
 
 const NotFound = () => {
   return (
@@ -22,7 +22,7 @@ const NotFound = () => {
             colorScheme="blue"
             size="lg"
             mt={2}
-            _hover={{ transform: 'scale(1.05)' }}
+            _hover={{transform: 'scale(1.05)'}}
             transition="all 0.2s"
           >
             Back to Home

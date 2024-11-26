@@ -3,33 +3,33 @@ import {Text} from '@chakra-ui/react';
 import {useState} from 'react';
 
 type Props = {
-	children: string;
+  children: string;
 };
 
 const ExpandableText = ({children}: Props) => {
-	const [expanded, setExpanded] = useState(false);
-	const limit = 250;
+  const [expanded, setExpanded] = useState(false);
+  const limit = 250;
 
-	if (!children) return null;
+  if (!children) return null;
 
-	if (children.length <= limit) return children;
+  if (children.length <= limit) return children;
 
-	const text = expanded ? children : children.substring(0, limit) + '...';
+  const text = expanded ? children : children.substring(0, limit) + '...';
 
-	return (
-		<Text textAlign="justify">
-			{text}
-			<Button
-				size="xs"
-				ml={1}
-				variant="surface"
-				onClick={() => setExpanded(!expanded)}
-				border={0}
-			>
-				{expanded ? 'Show Less' : 'Read More'}
-			</Button>
-		</Text>
-	);
+  return (
+    <Text textAlign="justify">
+      {text}
+      <Button
+        size="xs"
+        ml={1}
+        variant="surface"
+        onClick={() => setExpanded(!expanded)}
+        border={0}
+      >
+        {expanded ? 'Show Less' : 'Read More'}
+      </Button>
+    </Text>
+  );
 };
 
 export default ExpandableText;

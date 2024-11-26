@@ -10,12 +10,12 @@ import router from './routes.tsx';
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
-	<StrictMode>
-		<Provider>
-			<QueryClientProvider client={queryClient}>
-				<RouterProvider router={router} />
-				<ReactQueryDevtools />
-			</QueryClientProvider>
-		</Provider>
-	</StrictMode>
+  <StrictMode>
+    <Provider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </Provider>
+  </StrictMode>,
 );
